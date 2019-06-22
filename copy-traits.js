@@ -46,13 +46,11 @@ function addButton(specEmbed) {
   for (let tspec of templateSpecs) {
     output += specs[tspec] + ' ';
     let outputTraits = [];
-    console.log(tspec, templateTraits[tspec]);
     for (let tt of templateTraits[tspec]) {
       outputTraits.push(traits[tt] + 1);
     }
     output += outputTraits.join('-') + ' ';
   }
-  console.log(output.trim());
 
   const elt = document.createElement('div');
   elt.style.position = 'absolute';
