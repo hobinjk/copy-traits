@@ -100,4 +100,10 @@ function addButton(specEmbed) {
   firstSection.appendChild(elt);
 }
 
-addCopyTraitsButtons();
+if (document.body) {
+  addCopyTraitsButtons();
+} else {
+  document.addEventListener('DOMContentLoaded', () => {
+    addCopyTraitsButtons();
+  });
+}
