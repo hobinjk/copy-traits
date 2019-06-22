@@ -9,6 +9,12 @@ function addCopyTraitsButtons() {
   }
 }
 
+/**
+ * Parse a list of comma-separated integers
+ * @param {string} text
+ * @param {number} len - Expected length of list
+ * @return {Array<number>|undefined}
+ */
 function parseCSI(text, len) {
   if (!text) {
     return;
@@ -25,6 +31,10 @@ function parseCSI(text, len) {
   return ints;
 }
 
+/**
+ * Add a copy button to the given specialization embed
+ * @param {Element} specEmbed
+ */
 function addButton(specEmbed) {
   const embed = specEmbed.parentNode;
 
@@ -51,17 +61,18 @@ function addButton(specEmbed) {
     }
     output += outputTraits.join('-') + ' ';
   }
+  const iconSize = '28px';
 
   const elt = document.createElement('div');
   elt.style.position = 'absolute';
   elt.style.top = 0;
   elt.style.left = 0;
   elt.style.overflow = 'hidden';
-  elt.style.width = '28px';
-  elt.style.height = '28px';
-  elt.style.paddingLeft = '28px';
+  elt.style.width = iconSize;
+  elt.style.height = iconSize;
+  elt.style.paddingLeft = iconSize;
   elt.style.paddingRight = 0;
-  elt.style.lineHeight = '28px';
+  elt.style.lineHeight = iconSize;
   elt.style.zIndex = 20;
   elt.style.background = 'rgba(0, 0, 0, 0.8)';
   elt.textContent = output;
@@ -83,7 +94,7 @@ function addButton(specEmbed) {
     elt.style.paddingRight = '4px';
   });
   elt.addEventListener('mouseleave', function() {
-    elt.style.width = '28px';
+    elt.style.width = iconSize;
     elt.style.paddingRight = 0;
   });
   elt.addEventListener('click', function() {
@@ -95,6 +106,7 @@ function addButton(specEmbed) {
     });
   });
 
+  // Place it nicely inset with the first specialization section
   const firstSection = embed.querySelector('.gw2a--10x8O');
   firstSection.style.position = 'relative';
   firstSection.appendChild(elt);
