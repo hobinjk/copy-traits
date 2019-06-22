@@ -1,0 +1,19 @@
+{
+  "name": "copy-traits",
+  "version": "0.1.0",
+  "description": "Adds \"Copy Traits\" button to GW2A embeds",
+  "main": "copy-traits.js",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hobinjk@gmail.com",
+  "license": "MIT"
+}
