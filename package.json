@@ -4,7 +4,7 @@
   "description": "Adds \"Copy Traits\" button to GW2A embeds",
   "main": "copy-traits.js",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^3.1.1"
   },
   "devDependencies": {
     "svg-inline-loader": "^0.8.0",
